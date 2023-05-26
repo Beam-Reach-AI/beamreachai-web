@@ -1,6 +1,6 @@
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://beamreachai.com" # the base hostname & protocol for your site, e.g. http://example.com
-permalink: "/beamreachai-web/docs/"
+url: https://rchurch4.github.io # the base hostname & protocol for your site, e.g. http://example.com
+github_username:  rchurch4
 
 # Build settings
 theme: minima
