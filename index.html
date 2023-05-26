@@ -152,7 +152,7 @@ contact_area:
     <div id="slider10" class="rev_slider fullwidthbanner" data-version="5.4.7">
       <ul>
         <li data-transition="fade" data-thumb="">
-          <img src="{{ site.baseurl }}/{{page.hero_area.bg_image}}" alt="{{page.hero_area.title}}"/>
+          <img src="{{page.hero_area.bg_image}}" alt="{{page.hero_area.title}}"/>
           <div class="tp-caption font-weight-600 color-white text-center"
                data-x="center"
                data-y="middle"
@@ -201,7 +201,7 @@ contact_area:
            {% assign number = forloop.index %}
             <li data-transition="fade" data-thumb="">
                 {% if number == 1 %}
-                  <img src="{{ site.baseurl }}//assets/images/dummy.png" alt="" />
+                  <img src="/assets/images/dummy.png" alt="" />
                   <div
                        class="tp-caption font-weight-600 color-rob-blue"
                        data-x="['left','left','center','center']"
@@ -218,7 +218,7 @@ contact_area:
                        data-responsive_offset="on" style="z-index: 9;"> {{slider.title}}
                   </div>
                 {% elsif number == 2 %}
-                    <img src="{{ site.baseurl }}//assets/images/dummy.png" data-bgcolor="#f0f2f7" alt="" />
+                    <img src="/assets/images/dummy.png" data-bgcolor="#f0f2f7" alt="" />
                   <div
                        class="tp-caption font-weight-600 color-rose"
                        data-x="['left','left','center','center']"
@@ -235,7 +235,7 @@ contact_area:
                        data-responsive_offset="on" style="z-index: 9;"> {{slider.title}}
                   </div>
                 {% elsif number == 3 %}
-                    <img src="{{ site.baseurl }}//assets/images/dummy.png" alt="" />
+                    <img src="/assets/images/dummy.png" alt="" />
                     <div
                        class="tp-caption font-weight-600 color-yellow"
                        data-x="['left','left','center','center']"
@@ -252,7 +252,7 @@ contact_area:
                        data-responsive_offset="on" style="z-index: 9;"> {{slider.title}}
                     </div>
                 {% elsif number == 4 %}
-                    <img src="{{ site.baseurl }}//assets/images/dummy.png" data-bgcolor="#f0f2f7" alt="" />
+                    <img src="/assets/images/dummy.png" data-bgcolor="#f0f2f7" alt="" />
                     <div
                        class="tp-caption font-weight-600 color-teal"
                        data-x="['left','left','center','center']"
@@ -269,7 +269,7 @@ contact_area:
                        data-responsive_offset="on" style="z-index: 9;"> {{slider.title}}
                     </div>
                 {% else %}
-                    <img src="{{ site.baseurl }}//assets/images/dummy.png" alt="" />
+                    <img src="/assets/images/dummy.png" alt="" />
                     <div
                        class="tp-caption font-weight-600 color-rob-blue"
                        data-x="['left','left','center','center']"
@@ -380,7 +380,7 @@ contact_area:
                    data-type="image"
                  data-responsive="on"
                    data-responsive_offset="on" style="z-index: 5;">
-                   <img data-lazyload="" src="{{ site.baseurl }}/{{slider.image}}"
+                   <img data-lazyload="" src="{{slider.image}}"
                    data-ww="['675','640','500','400']"
                    data-hh="auto" alt="" />
                </div>
@@ -428,7 +428,7 @@ contact_area:
             {% if service.image %}
             <div class="col-lg-6 order-lg-{{chck_number}}">
               <div class="img-blob blob15">
-                <img src="{{ site.baseurl }}/{{service.image}}" style="width: 30rem" alt="{{service.title}}"/>
+                <img src="{{service.image}}" style="width: 30rem" alt="{{service.title}}"/>
               </div>
             </div>
             {% endif %}
@@ -614,7 +614,7 @@ contact_area:
         <div class="row align-items-center">
           <div class="col-lg-6">
             <div class="img-blob blob1">
-              <img src="{{ site.baseurl }}/{{page.about_us_area.image}}" style="width: 30rem" alt="{{page.about_us_area.title}}"/>
+              <img src="{{page.about_us_area.image}}" style="width: 30rem" alt="{{page.about_us_area.title}}"/>
             </div>
           </div>
           <!--/column -->
@@ -709,7 +709,7 @@ contact_area:
             <div>
               {% if page.contact_area.image %}
               <div class="img-blob blob3">
-                <img src="{{ site.baseurl }}/{{page.contact_area.image}}" style="width: 30rem" alt="{{page.contact_area.title}}"/>
+                <img src="{{page.contact_area.image}}" style="width: 30rem" alt="{{page.contact_area.title}}"/>
               </div>
               {% endif %}
               <div class="row counter counter-s position-absolute" style="top: 60%; left: 15%;">
