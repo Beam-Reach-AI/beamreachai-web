@@ -5,9 +5,9 @@
         <div class="widget">
          <a href="{{site.data.general_settings.url}}">
           {% if include.light_logo %}
-            <img src="{{site.data.general_settings.light_logo_1x}}" srcset="{{site.data.general_settings.light_logo_1x}} 1x, {{site.data.general_settings.light_logo_2x}} 2x" alt="{{site.data.general_settings.title}}"/>
+            <img src="{{ site.baseurl }}/{{site.data.general_settings.light_logo_1x}}" srcset="{{ site.baseurl }}/{{site.data.general_settings.light_logo_1x}} 1x, {{ site.baseurl }}/{{site.data.general_settings.light_logo_2x}} 2x" alt="{{site.data.general_settings.title}}"/>
             {% else %}
-            <img src="{{site.data.general_settings.black_logo_1x}}" srcset="{{site.data.general_settings.black_logo_1x}} 1x, {{site.data.general_settings.black_logo_2x}} 2x" alt="{{site.data.general_settings.title}}"/>
+            <img src="{{ site.baseurl }}/{{site.data.general_settings.black_logo_1x}}" srcset="{{ site.baseurl }}/{{site.data.general_settings.black_logo_1x}} 1x, {{ site.baseurl }}/{{site.data.general_settings.black_logo_2x}} 2x" alt="{{site.data.general_settings.title}}"/>
           {% endif %}
          </a>
           <div class="space40"></div>
