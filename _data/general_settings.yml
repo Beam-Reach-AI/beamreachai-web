@@ -98,17 +98,17 @@ footer_newsletter:
 one_page_nav_settings:
   links:
     - text: "Home"
-      url: "#home"
+      url: "/"
     - text: "Services"
-      url: "#services"
+      url: "/#services"
 #    - text: "Experiences"
 #      url: "#experiences"
 #    - text: "Portfolio"
 #      url: "#portfolio"
-#    - text: "Testimonials"
-#      url: "#testimonials"
+    - text: "Our Team"
+      url: "/team"
     - text: "Contact"
-      url: "#contact"
+      url: "/#contact"
 
 author_page_header:
   header_background_image: "/assets/images/art/bg31.jpg"

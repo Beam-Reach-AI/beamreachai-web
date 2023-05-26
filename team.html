@@ -1,0 +1,147 @@
+---
+layout: default
+title: Beam Reach AI
+custom_css: aqua
+custom_font: font6
+
+hero_area:
+  enable: true
+  bg_image: "/assets/images/bg1.jpg"
+  title: "Our Founders."
+
+services_area:
+  enable: true
+  title: "Message from Our Founders"
+  sub_title: "We started <b>Beam Reach AI</b> because we enjoy working with startups and want to make Machine Learning, Artificial Intelligence, and Data Science more accessible to more companies and people.  <br> We have seen too many companies try and fail to incorporate these compliated technologies into their workflows and products. <br> We are experts in our fields and have all performed extensive research in ML, AI, data science, and natural language processing. <br> We have years of industry experience in our respective fields, and have built extensive systems for startups of all shapes and sizes.  <br> Our goal for every company that we work with is to set them up for success by providing our expertise as early as possible in the process of designing and implementing these complex systems."
+  services:
+
+    - title: "Rob Churchill"
+      image: "/assets/images/rob.png"
+      description: |
+         Rob Churchill has a Ph.D. in Computer Science from Georgetown University. His graduate research focused on machine learning and natural language processing.  He has published peer-reviewed research papers extensively in some of the world's most renowned venues.  Rob has built robust machine learning and data science pipelines from scratch for multiple startups, and has helped many others to improve their ML/AI/Data Science systems.
+      id: "rob"
+
+    - title: "James Maguire"
+      image: "/assets/images/james.jpg"
+      description: |
+          James Maguire has a Masters in Computational Linguistics from Georgetown University.  He has worked on many natural language processing, machine learning, and artificial intelligence projects, ranging from large language model applications to inventing new types of neural networks.
+      id: "james"
+
+---
+
+<div class="content-wrapper">
+    {% include one_page_nav.html %}
+{% if page.hero_area.enable %}
+<div class="wrapper dark-wrapper" id="home">
+  <div class="rev_slider_wrapper fullwidth-container">
+    <div id="slider10" class="rev_slider fullwidthbanner" data-version="5.4.7">
+      <ul>
+        <li data-transition="fade" data-thumb="">
+          <img src="{{page.hero_area.bg_image}}" alt="{{page.hero_area.title}}"/>
+          <div class="tp-caption font-weight-600 color-white text-center"
+               data-x="center"
+               data-y="middle"
+               data-voffset="['-45','-45','-45','-45']"
+               data-fontsize="['50','50','40','36']"
+               data-lineheight="['65','65','55','51']"
+               data-width="['550','550','550','340']"
+               data-textAlign="['center','center','center','center']"
+               data-whitespace="['normal','normal','normal','normal']"
+               data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"z:0;rX:0;rY:0;rZ:0;sX:0.7;sY:0.7;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+               data-responsive="on"
+               data-responsive_offset="on" style="z-index: 9;"> {{page.hero_area.title}}
+          </div>
+<!--          <a class="tp-caption btn btn-l btn-white btn-strong-hover scroll"-->
+<!--               data-x="center"-->
+<!--               data-y="middle"-->
+<!--               data-voffset="['85','85','85','85']"-->
+<!--               data-width="['auto','auto','auto','auto']"-->
+<!--               data-textAlign="['center','center','center','center']"-->
+<!--               data-frames='[{"delay":1500,"speed":1500,"frame":"0","from":"z:0;rX:0;rY:0;rZ:0;sX:0.7;sY:0.7;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'-->
+<!--               data-responsive="on"-->
+<!--               data-responsive_offset="on" style="z-index: 9;" href="{{page.hero_area.btn_url}}"> {{page.hero_area.btn_text}}-->
+<!--          </a>-->
+        </li>
+      </ul>
+      <div class="tp-bannertimer tp-bottom"></div>
+    </div>
+    <!-- /.rev_slider -->
+  </div>
+  <!-- /.rev_slider_wrapper -->
+</div>
+<!-- /.wrapper -->
+{% endif %}
+
+  <div class="wrapper light-wrapper">
+     <div class="container inner">
+<!--      {% include clients_carousel.html %}-->
+      {% if page.services_area.enable %}
+      <div class="services-area" id="services">
+      <div class="row">
+        <div class="col-md-7 mx-auto">
+<!--         <div class="space140"></div>-->
+         <h2 class="title-color color-gray text-center">{{page.services_area.title}}</h2>
+         <h3 class="display-6 text-center">{{page.services_area.sub_title}}</h3>
+<!--         <div class="space40"></div>-->
+        </div>
+      </div>
+      {% for service in page.services_area.services %}
+      {% assign number = forloop.index %}
+      {% assign chck_number = forloop.index | modulo: 2 %}
+      <!--/.row -->
+          <div class="space120" id="{{service.id}}"></div>
+          <div class="row align-items-center">
+            {% if service.image %}
+            <div class="col-lg-6 order-lg-{{chck_number}}">
+              <div class="img-blob blob15">
+                <img src="{{service.image}}" style="width: 30rem" alt="{{service.title}}"/>
+              </div>
+            </div>
+            {% endif %}
+            <div class="space30 d-none d-md-block d-lg-none"></div>
+          {% if number == 1 %}
+            <div class="col-lg-6 pr-60 pr-md-15">
+              <h2 class="color-rob-blue">{{service.title}}</h2>
+              <div class="space10"></div>
+              <h6>{{service.description}}</h6>
+              <h6>Learn more about Rob on his personal website: <a href="https://www.churchill.io">churchill.io</a>.</h6>
+              <div class="space10"></div>
+            </div>
+        {% elsif number == 2 %}
+            <div class="col-lg-6 pr-60 pr-md-15">
+              <h2 class="color-teal">{{service.title}}</h2>
+              <div class="space10"></div>
+              <h6>{{service.description}}</h6>
+              <div class="space10"></div>
+            </div>
+        {% elsif number == 3 %}
+            <div class="col-lg-6 pr-60 pr-md-15">
+              <h2 class="color-rose">{{service.title}}</h2>
+              <div class="space10"></div>
+              <h6>{{service.description}}</h6>
+              <div class="space10"></div>
+            </div>
+        {% elsif number == 4 %}
+            <div class="col-lg-6 pr-60 pr-md-15">
+              <h2 class="color-teal">{{service.title}}</h2>
+              <div class="space10"></div>
+              <h6>{{service.description}}</h6>
+              <div class="space10"></div>
+            </div>
+        {% else %}
+            <div class="col-lg-6 pr-60 pr-md-15">
+              <h2>{{service.title}}</h2>
+              <div class="space10"></div>
+              <h6>{{service.description}}</h6>
+              <div class="space10"></div>
+            </div>
+        {% endif %}
+        <!--/column -->
+      </div>
+      <!--/.row -->
+      {% endfor %}
+      </div>
+      {% endif %}
+     </div>
+   </div>
+</div>
