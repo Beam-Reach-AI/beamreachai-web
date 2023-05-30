@@ -129,7 +129,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
     font-family: 'Jost', sans-serif;
     color: #606060;
-    font-size: 0.8rem;
+    font-size: 1rem;
     background: #f9fafb;
     overflow-x: hidden;
     position: relative;
@@ -163,7 +163,8 @@ strong {
     font-weight: bold;
 }
 p {
-    margin: 0 0 1rem
+    margin: 0 0 1rem;
+    font-size: 1rem;
 }
 .hover {
     -webkit-transition: all 200ms ease-in-out;
@@ -980,6 +981,9 @@ button.hamburger.animate.active:after {
 .btn.btn-violet {
     background: var(--color-violet)
 }
+.btn.btn-deep-purple {
+    background: var(--color-deep-purple)
+}
 .btn.btn-pink {
     background: var(--color-pink)
 }
@@ -1404,6 +1408,27 @@ footer.dark-wrapper,
     background-image: -o-linear-gradient(315deg, rgba(149, 74, 166, 1) 0%, rgba(114, 90, 238, 1) 100%);
     background-image: linear-gradient(135deg, rgba(149, 74, 166, 1) 0%, rgba(114, 90, 238, 1) 100%);
 }
+
+.gradient-wrapper-blue {
+    background-image: -o-linear-gradient(315deg, rgba(0, 153, 255, 1) 0%, rgba(0, 17, 179, 1) 100%);
+    background-image: linear-gradient(135deg, rgba(0, 153, 255, 1) 0%, rgba(0, 17, 179, 1) 100%);
+}
+
+.gradient-wrapper-rose {
+    background-image: -o-linear-gradient(315deg, rgba(209, 107, 134, 1) 0%, rgba(153, 24, 58, 1) 100%);
+    background-image: linear-gradient(135deg, rgba(209, 107, 134, 1) 0%, rgba(153, 24, 58, 1) 100%);
+}
+
+.gradient-wrapper-yellow {
+    background-image: -o-linear-gradient(315deg, rgba(245, 196, 99, 1) 0%, rgba(201, 135, 0, 1) 100%);
+    background-image: linear-gradient(135deg, rgba(245, 196, 99, 1) 0%, rgba(201, 135, 0, 1) 100%);
+}
+
+.gradient-wrapper-teal {
+    background-image: -o-linear-gradient(315deg, rgba(88, 179, 154, 1) 0%, rgba(20, 80, 60, 1) 100%);
+    background-image: linear-gradient(135deg, rgba(88, 179, 154, 1) 0%, rgba(20, 80, 60, 1) 100%);
+}
+
 .fill-white-wrapper {
     fill: #fff;
 }
@@ -5448,6 +5473,12 @@ pre {
 .bullet-purple i {
     color: var(--color-purple) !important
 }
+
+.color-deep-purple,
+.bullet-deep-purple>li:before,
+.bullet-deep-purple i {
+    color: var(--color-deep-purple) !important
+}
 .color-violet,
 .bullet-violet>li:before,
 .bullet-violet i {
@@ -7144,4 +7175,8 @@ footer.inverse-text address {
 }
 .overflow-hidden {
     overflow: hidden;
+}
+
+.navbar-brand img, .widget img {
+    max-width: 200px!important;
 }

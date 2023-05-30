@@ -1,0 +1,107 @@
+---
+layout: page_2
+page_header:
+  enable: true
+  title: "Improve AI/ML Capabilities"
+  sub_title: "Take your systems to the next level."
+  gradient_class: "gradient-wrapper-yellow"
+custom_font: font6
+
+services_area:
+  enable: true
+  title: ""
+  sub_title: ""
+  services:
+    - title: ""
+      image: "/assets/images/concept/concept3@2x.png"
+      description: |
+        If you have a data science, machine learning, or AI system in place, we can improve your accuracy with cutting-edge models, and improve the efficiency of models by simplifying aspects of the data stack. <br> Often people implement a model and never look at it again.  We can assess your current models' performance and recommend improvements. <br> We can build model drift monitoring systems so that you are never left in the dark about model performance again. <br> Whether you want to gain new customers with mind-blowing AI applications, maintain model performance, or save training time and training costs, we can help.  <div class="space10"></div> Relevant Services include:
+      button_text: "Inquire Now"
+      button_url: "/#contact.html"
+      id: "improve"
+      lists:
+        - title: "Implement Large Language Models (LLMs), like GPT."
+        - title: "Implement custom neural network and traditional models."
+        - title: "Model drift monitoring and assessment."
+        - title: "Improve training processes to save time and money."
+---
+
+<div class="content-wrapper">
+  <div class="wrapper light-wrapper">
+     <div class="container inner">
+<!--      {% include clients_carousel.html %}-->
+      {% if page.services_area.enable %}
+      <div class="services-area" id="services">
+      <div class="row">
+        <div class="col-md-7 mx-auto">
+<!--         <div class="space140"></div>-->
+         <h2 class="title-color color-gray text-center">{{page.services_area.title}}</h2>
+         <h3 class="display-6 text-center">{{page.services_area.sub_title}}</h3>
+<!--         <div class="space40"></div>-->
+        </div>
+      </div>
+      {% for service in page.services_area.services %}
+      {% assign number = forloop.index %}
+      {% assign chck_number = forloop.index | modulo: 2 %}
+      <!--/.row -->
+          <div class="space10" id="{{service.id}}"></div>
+          <div class="row align-items-center">
+            {% if service.image %}
+            <div class="col-lg-6 order-lg-{{chck_number}}">
+              <div class="img-blob blob14">
+                <img src="{{service.image}}" style="width: 30rem" alt="{{service.title}}"/>
+              </div>
+            </div>
+            {% endif %}
+            <div class="space30 d-none d-md-block d-lg-none"></div>
+          {% if number == 1 %}
+            <div class="col-lg-6 pr-60 pr-md-15">
+              <h2 class="color-rob-blue">{{service.title}}</h2>
+              <div class="space10"></div>
+              <p>{{service.description}}</p>
+                <ul class="icon-list bullet-yellow">
+                    {% for list in service.lists %}
+                    <li><i class="jam jam-arrow-right"></i>{{list.title}}</li>
+                    {% endfor %}
+                </ul>
+                <div class="space10"></div>
+                <a href="{{service.button_url}}" class="btn btn-yellow">{{service.button_text}}</a>
+            </div>
+        {% elsif number == 2 %}
+            <div class="col-lg-6 pr-60 pr-md-15">
+              <h2 class="color-teal">{{service.title}}</h2>
+              <div class="space10"></div>
+              <h6>{{service.description}}</h6>
+              <div class="space10"></div>
+            </div>
+        {% elsif number == 3 %}
+            <div class="col-lg-6 pr-60 pr-md-15">
+              <h2 class="color-rose">{{service.title}}</h2>
+              <div class="space10"></div>
+              <h6>{{service.description}}</h6>
+              <div class="space10"></div>
+            </div>
+        {% elsif number == 4 %}
+            <div class="col-lg-6 pr-60 pr-md-15">
+              <h2 class="color-teal">{{service.title}}</h2>
+              <div class="space10"></div>
+              <h6>{{service.description}}</h6>
+              <div class="space10"></div>
+            </div>
+        {% else %}
+            <div class="col-lg-6 pr-60 pr-md-15">
+              <h2>{{service.title}}</h2>
+              <div class="space10"></div>
+              <h6>{{service.description}}</h6>
+              <div class="space10"></div>
+            </div>
+        {% endif %}
+        <!--/column -->
+      </div>
+      <!--/.row -->
+      {% endfor %}
+      </div>
+      {% endif %}
+     </div>
+   </div>
+</div>

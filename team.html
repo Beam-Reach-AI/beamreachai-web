@@ -1,13 +1,10 @@
 ---
-layout: default
-title: Beam Reach AI
-custom_css: aqua
-custom_font: font6
-
-hero_area:
+layout: page_2
+page_header:
   enable: true
-  bg_image: "/assets/images/bg1.jpg"
-  title: "Our Founders."
+  title: "Our Founders"
+  sub_title: ""
+  gradient_class: "gradient-wrapper-blue"
 
 services_area:
   enable: true
@@ -22,7 +19,7 @@ services_area:
       id: "rob"
 
     - title: "James Maguire"
-      image: "/assets/images/james.jpg"
+      image: "/assets/images/james.JPG"
       description: |
           James Maguire has a Masters in Computational Linguistics from Georgetown University.  He has worked on many natural language processing, machine learning, and artificial intelligence projects, ranging from large language model applications to inventing new types of neural networks.
       id: "james"
@@ -30,7 +27,6 @@ services_area:
 ---
 
 <div class="content-wrapper">
-    {% include one_page_nav.html %}
 {% if page.hero_area.enable %}
 <div class="wrapper dark-wrapper" id="home">
   <div class="rev_slider_wrapper fullwidth-container">
@@ -93,7 +89,7 @@ services_area:
           <div class="row align-items-center">
             {% if service.image %}
             <div class="col-lg-6 order-lg-{{chck_number}}">
-              <div class="img-blob blob15">
+              <div class="img-blob blob5">
                 <img src="{{service.image}}" style="width: 30rem" alt="{{service.title}}"/>
               </div>
             </div>

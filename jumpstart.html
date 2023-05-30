@@ -1,0 +1,108 @@
+---
+layout: page_2
+page_header:
+  enable: true
+  title: "Jump Start your AI and ML Efforts"
+  sub_title: "Build your systems, from scratch, the right way, the first time."
+  gradient_class: "gradient-wrapper-blue"
+custom_font: font6
+
+services_area:
+  enable: true
+  title: ""
+  sub_title: ""
+  services:
+    - title: ""
+      image: "/assets/images/concept/concept8@2x.png"
+      description: |
+          We are not your run-of-the-mill data scientists. <br> We can start from scratch and build an entirely automated system to continuously, reliably solve your AI or ML problems and serve your customers. <br> If you know what you want to do, but don't know how to get started, we can help design a plan to solve your problem efficiently and accurately. <br> We have experience building every aspect of a successful machine learning pipeline: from data collection, preprocessing, and efficient storage, to feature engineering, model design, and testing, to scalable, reliable production pipelines. <div class="space10"></div> Relevant Services include:
+      button_text: "Inquire Now"
+      button_url: "/#contact.html"
+      id: "jumpstart"
+      lists:
+        - title: "Design and Implement from scratch."
+        - title: "Implement Scalable Production Pipelines."
+        - title: "Model Design, Feature Engineering, and Robust Testing Pipelines."
+        - title: "Data Collection and Storage."
+
+---
+
+<div class="content-wrapper">
+  <div class="wrapper light-wrapper">
+     <div class="container inner">
+<!--      {% include clients_carousel.html %}-->
+      {% if page.services_area.enable %}
+      <div class="services-area" id="services">
+      <div class="row">
+        <div class="col-md-7 mx-auto">
+<!--         <div class="space140"></div>-->
+         <h2 class="title-color color-gray text-center">{{page.services_area.title}}</h2>
+         <h3 class="display-6 text-center">{{page.services_area.sub_title}}</h3>
+<!--         <div class="space40"></div>-->
+        </div>
+      </div>
+      {% for service in page.services_area.services %}
+      {% assign number = forloop.index %}
+      {% assign chck_number = forloop.index | modulo: 2 %}
+      <!--/.row -->
+          <div class="space10" id="{{service.id}}"></div>
+          <div class="row align-items-center">
+            {% if service.image %}
+            <div class="col-lg-6 order-lg-{{chck_number}}">
+              <div class="img-blob blob14">
+                <img src="{{service.image}}" style="width: 30rem" alt="{{service.title}}"/>
+              </div>
+            </div>
+            {% endif %}
+            <div class="space30 d-none d-md-block d-lg-none"></div>
+          {% if number == 1 %}
+            <div class="col-lg-6 pr-60 pr-md-15">
+              <h2 class="color-rob-blue">{{service.title}}</h2>
+              <div class="space10"></div>
+              <p>{{service.description}}</p>
+                <ul class="icon-list bullet-rob-blue">
+                    {% for list in service.lists %}
+                    <li><i class="jam jam-arrow-right"></i>{{list.title}}</li>
+                    {% endfor %}
+                </ul>
+                <div class="space10"></div>
+                <a href="{{service.button_url}}" class="btn btn-rob-blue">{{service.button_text}}</a>
+            </div>
+        {% elsif number == 2 %}
+            <div class="col-lg-6 pr-60 pr-md-15">
+              <h2 class="color-teal">{{service.title}}</h2>
+              <div class="space10"></div>
+              <h6>{{service.description}}</h6>
+              <div class="space10"></div>
+            </div>
+        {% elsif number == 3 %}
+            <div class="col-lg-6 pr-60 pr-md-15">
+              <h2 class="color-rose">{{service.title}}</h2>
+              <div class="space10"></div>
+              <h6>{{service.description}}</h6>
+              <div class="space10"></div>
+            </div>
+        {% elsif number == 4 %}
+            <div class="col-lg-6 pr-60 pr-md-15">
+              <h2 class="color-teal">{{service.title}}</h2>
+              <div class="space10"></div>
+              <h6>{{service.description}}</h6>
+              <div class="space10"></div>
+            </div>
+        {% else %}
+            <div class="col-lg-6 pr-60 pr-md-15">
+              <h2>{{service.title}}</h2>
+              <div class="space10"></div>
+              <h6>{{service.description}}</h6>
+              <div class="space10"></div>
+            </div>
+        {% endif %}
+        <!--/column -->
+      </div>
+      <!--/.row -->
+      {% endfor %}
+      </div>
+      {% endif %}
+     </div>
+   </div>
+</div>
