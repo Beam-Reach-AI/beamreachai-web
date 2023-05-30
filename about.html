@@ -1,0 +1,59 @@
+---
+layout: page_2
+page_header:
+  enable: true
+  title: "About Beam Reach AI"
+  sub_title: ""
+  gradient_class: "gradient-wrapper-blue"
+custom_font: font6
+
+about_us_area:
+  enable: true
+  title: "<b>Beam Reach AI</b> is a boutique data science consultancy."
+  image: "/assets/images/beach.jpg"
+  description: |
+    We are experts in our fields and have all performed extensive research in machine learning, data science, natural language processing, and artificial intelligence. We have years of industry experience in our respective fields, and have built extensive systems for startups of all shapes and sizes.  We started <b>Beam Reach AI</b> because we enjoy working with startups and want to make ML, AI, and Data Science more accessible to more companies and people.  We have seen too many companies try and fail to incorporate ML, AI, and Data Science into their workflows and products.  Our goal for every company that we work with is to set them up for success by providing our expertise as early as possible in the process of designing and implementing these complex systems.
+  button_text: "Contact Us"
+  button_url: "/#contact"
+---
+
+<div class="content-wrapper">
+  <div class="wrapper light-wrapper">
+<!--      {% include clients_carousel.html %}-->
+      <div class="wrapper light-wrapper" id="about">
+      <div class="container inner pb-0">
+        {% if page.about_us_area.enable %}
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="img-blob blob1">
+              <img src="{{page.about_us_area.image}}" style="width: 30rem" alt="{{page.about_us_area.title}}"/>
+            </div>
+          </div>
+          <!--/column -->
+          <div class="space20 d-md-none"></div>
+          <div class="space50 d-none d-md-block d-lg-none"></div>
+          <div class="col-lg-6 pl-60 pl-md-15">
+            <h3 class="display-3">{{page.about_us_area.title}}</h3>
+            <div class="space20"></div>
+            <p>{{page.about_us_area.description}}</p>
+            <div class="row">
+              <a href="{{page.about_us_area.button_url}}" class="mx-auto btn btn-rob-blue">{{page.about_us_area.button_text}}</a>
+            </div>
+            <div class="space20"></div>
+            <div class="row counter">
+             {% for projects in page.about_us_area.projects %}
+              <div class="col-md-4">
+                <h3>{{projects.projects_number}}</h3>
+                <p>{{projects.title}}</p>
+              </div>
+             {% endfor %}
+            </div>
+            <!--/.row -->
+          </div>
+          <!--/column -->
+        </div>
+        <!--/.row -->
+        {% endif %}
+    </div>
+   </div>
+</div>

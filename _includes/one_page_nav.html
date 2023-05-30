@@ -23,8 +23,24 @@
         <button class="plain offcanvas-close offcanvas-nav-close"><i class="jam jam-close"></i></button>
       </div>
       <ul class="navbar-nav ml-auto">
-        {% for nav in site.data.general_settings.one_page_nav_settings.links %}
-        <li class="nav-item"><a class="nav-link scroll" href="{{nav.url}}">{{nav.text}}</a></li>
+        {% for menu in site.data.navigation.main_menu %}
+
+        {% assign check_menu = menu.menu_type %}
+        {% case check_menu %}
+        {% when "dropdown" %}
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="{{menu.url}}">{{menu.text}}</a>
+          <ul class="dropdown-menu">
+            {% if menu.sub_menu %}
+            {% for label_one in menu.sub_menu %}
+            <li><a class="dropdown-item" href="{{label_one.url}}">{{label_one.text}}</a></li>
+            {% endfor %}
+            {% endif %}
+          </ul>
+        </li>
+        {% else %}
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="{{menu.url}}">{{menu.text}}</a>
+        </li>
+        {% endcase %}
         {% endfor %}
       </ul>
       <!-- /.navbar-nav -->
@@ -36,8 +52,8 @@
 <!-- /.navbar -->
 <div class="offcanvas-info inverse-text">
   <button class="plain offcanvas-close offcanvas-info-close"><i class="jam jam-close"></i></button>
-  <a href="{{site.url}}">
-    <img src="{{site.data.general_settings.light_logo_1x}}" srcset="{{site.data.general_settings.light_logo_1x}} 1x, {{site.data.general_settings.light_logo_2x}} 2x" class="{% if include.logo_class %} {{include.logo_class}} {% else %} logo-light {% endif %}" alt="{{site.data.general_settings.title}}"/>
+    <a href="{{site.url}}" class="small-logo">
+    <img src="{{site.data.general_settings.light_logo_1x}}" srcset="{{site.data.general_settings.light_logo_1x}} 1x, {{site.data.general_settings.light_logo_2x}} 2x" class="{% if include.logo_class %}{{include.logo_class}} small-logo{% else %}logo-light small-logo{% endif %}" alt="{{site.data.general_settings.title}}"/>
   </a>
   <div class="space30"></div>
   <p>{{site.data.general_settings.description}}</p>

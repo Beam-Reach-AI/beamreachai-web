@@ -112,13 +112,6 @@ services_area:
         - title: "Help your team understand core AI, ML, and Data Science concepts."
         - title: "Guide your team through the process of creating scalable products in the cloud."
 
-about_us_area:
-  enable: true
-  title: "<b>Beam Reach AI</b> is a boutique data science consultancy consisting of expert computer scientists, data scientists, and computational linguists."
-  image: "/assets/images/beach.jpg"
-  description: |
-    We are experts in our fields and have all performed extensive research in machine learning, data science, natural language processing, and artificial intelligence. We have years of industry experience in our respective fields, and have built extensive systems for startups of all shapes and sizes.  We started <b>Beam Reach AI</b> because we enjoy working with startups and want to make ML, AI, and Data Science more accessible to more companies and people.  We have seen too many companies try and fail to incorporate ML, AI, and Data Science into their workflows and products.  Our goal for every company that we work with is to set them up for success by providing our expertise as early as possible in the process of designing and implementing these complex systems.
-
 contact_area:
   enable: true
   title: "Get in Touch"
@@ -686,91 +679,6 @@ contact_area:
     </div>
 <!-- /.wrapper -->
 
-    <div class="wrapper light-wrapper" id="about">
-      <div class="container inner pb-0">
-        {% if page.about_us_area.enable %}
-        <div class="row align-items-center">
-          <div class="col-lg-6">
-            <div class="img-blob blob1">
-              <img src="{{page.about_us_area.image}}" style="width: 30rem" alt="{{page.about_us_area.title}}"/>
-            </div>
-          </div>
-          <!--/column -->
-          <div class="space20 d-md-none"></div>
-          <div class="space50 d-none d-md-block d-lg-none"></div>
-          <div class="col-lg-6 pl-60 pl-md-15">
-            <h3 class="display-3">{{page.about_us_area.title}}</h3>
-            <div class="space20"></div>
-            <p>{{page.about_us_area.description}}</p>
-            <div class="space20"></div>
-            <div class="row counter">
-             {% for projects in page.about_us_area.projects %}
-              <div class="col-md-4">
-                <h3>{{projects.projects_number}}</h3>
-                <p>{{projects.title}}</p>
-              </div>
-             {% endfor %}
-            </div>
-            <!--/.row -->
-          </div>
-          <!--/column -->
-        </div>
-        <!--/.row -->
-        {% endif %}
-<!--        {% if page.three_columns_area.enable %}-->
-<!--        <div class="space70"></div>-->
-<!--        <div class="row gutter-40">-->
-<!--          {% assign first_column = page.three_columns_area.first_column %}-->
-<!--          <div class="col-lg-4">-->
-<!--            <h4>{{first_column.title}}</h4>-->
-<!--            <p>{{first_column.description}}</p>-->
-<!--            <ul class="progress-list">-->
-<!--              {% for skills in first_column.skills %}-->
-<!--              <li>-->
-<!--                <p>{{skills.title}}</p>-->
-<!--                <div class="progressbar line default" data-value="{{skills.progress_amount}}"></div>-->
-<!--              </li>-->
-<!--              {% endfor %}-->
-<!--            </ul>-->
-<!--            &lt;!&ndash; /.progress-list &ndash;&gt;-->
-<!--          </div>-->
-<!--          &lt;!&ndash;/column &ndash;&gt;-->
-<!--          {% assign second_column = page.three_columns_area.second_column %}-->
-<!--          <div class="space30 d-none d-md-block d-lg-none"></div>-->
-<!--          <div class="col-lg-4">-->
-<!--            <h4>{{second_column.title}}</h4>-->
-<!--            <p>{{second_column.description}}</p>-->
-<!--            <ul class="icon-list bullet-default">-->
-<!--              {% for lists in page.three_columns_area.second_column.lists %}-->
-<!--               <li><i class="jam jam-arrow-right"></i>{{lists}}</li>-->
-<!--              {% endfor %}-->
-<!--            </ul>-->
-<!--          </div>-->
-<!--          &lt;!&ndash;/column &ndash;&gt;-->
-<!--          {% assign third_column = page.three_columns_area.third_column %}-->
-<!--          <div class="space30 d-none d-md-block d-lg-none"></div>-->
-<!--          <div class="col-lg-4">-->
-<!--            <h4>{{third_column.title}}</h4>-->
-<!--            {% for lists in page.three_columns_area.third_column.lists %}-->
-<!--            <div class="d-flex flex-row">-->
-<!--              <div>-->
-<!--                <span class="icon icon-bg icon-bg-default color-default mr-25"><span class="number">{{forloop.index}}</span></span>-->
-<!--              </div>-->
-<!--              <div>-->
-<!--                <h5 class="mb-5">{{lists.title}}</h5>-->
-<!--                <p class="mb-0">{{lists.description}}</p>-->
-<!--              </div>-->
-<!--            </div>-->
-<!--            <div class="space20"></div>-->
-<!--            {% endfor %}-->
-<!--          </div>-->
-<!--          &lt;!&ndash;/column &ndash;&gt;-->
-<!--        </div>-->
-<!--        &lt;!&ndash;/.row &ndash;&gt;-->
-<!--       {% endif %}-->
-<!--      </div>-->
-<!--      &lt;!&ndash; /.container &ndash;&gt;-->
-    </div>
         {% if page.contact_area.enable %}
     <div class="contact-area" id="contact">
     <div class="wrapper gray-wrapper">

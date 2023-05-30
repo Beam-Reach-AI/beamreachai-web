@@ -7177,6 +7177,6 @@ footer.inverse-text address {
     overflow: hidden;
 }
 
-.navbar-brand img, .widget img {
+.navbar-brand img, .widget img, .small-logo {
     max-width: 200px!important;
 }

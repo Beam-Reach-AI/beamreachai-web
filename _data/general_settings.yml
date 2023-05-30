@@ -48,7 +48,7 @@ social_accounts:
 external_links:
   title: "Learn More"
   links:
-    - url: "#about"
+    - url: "/about"
       text: "About Us"
 #    - url: "#"
 #      text: "Our Story"
