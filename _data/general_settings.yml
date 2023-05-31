@@ -56,7 +56,7 @@ external_links:
 #      text: "Projects"
 #    - url: "#"
 #      text: "Pricing"
-    - url: "#services"
+    - url: "/#services"
       text: "Services"
 
 
